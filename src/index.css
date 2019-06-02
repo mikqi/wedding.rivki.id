@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Artilla";
+  src: url("fonts/Artilla.ttf");
+}
+
+@font-face {
+  font-family: "Autumn";
+  src: url("fonts/Autumn-in-November.ttf");
+}
+
+@font-face {
+  font-family: "SinhalaMN";
+  src: url("fonts/SinhalaMN.ttf");
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
