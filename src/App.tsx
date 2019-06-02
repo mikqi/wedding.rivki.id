@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import couple from "./images/K18.png";
+import couple from "./images/couple.png";
 
 function App() {
   return (
