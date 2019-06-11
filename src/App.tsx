@@ -1,10 +1,13 @@
 import React from "react";
+import ReactAudioPlayer from 'react-audio-player';
+
 import "./App.css";
 import couple from "./images/couple.png";
 import separator from "./images/separator.png";
 import topLeft from "./images/top-left.png";
 import topRight from "./images/top-right.png";
 import bottom from "./images/bottom.png";
+import signature from "./images/signature.jpg"
 
 function App() {
   return (
@@ -61,6 +64,24 @@ function App() {
             style={{ opacity: 0.3 }}
           />
         </div>
+      </div>
+      <div className="flex justify-center flex-column w-50 center mt4">
+        <div className="center mb3">
+          Location
+        </div>
+        <button className="f4 grow no-underline br-pill ph3 pv2 mb2 dib white bg-near-black outline-0">Get Direction</button>
+
+        <div className="center mt5 mb4">
+          Credits
+        </div>
+        <img src={signature} className="center w-50" />
+        <ReactAudioPlayer
+          src="./audio.mp3"
+          className="dn"
+          controls
+          autoPlay
+          loop
+        />
       </div>
       <img src={bottom} className="w-100 mt6" />
     </div>
