@@ -23,6 +23,12 @@ function App() {
   }
   let isEligibleFullHeight = windowHeight >= MINIMAL_HEIGHT
 
+  setTimeout(() => {
+    let audioPlayer = document.getElementById('lets-rock')
+    if (audioPlayer && audioPlayer instanceof HTMLAudioElement) {
+      audioPlayer.play()
+    }
+  }, 500)
   return (
     <div
       style={{
@@ -94,6 +100,7 @@ function App() {
         </div>
         <img src={signature} className="center w-50" />
         <ReactAudioPlayer
+          id="lets-rock"
           src="./audio.mp3"
           className="dn"
           controls
