@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "wedding-rivki",
+    "production": "wedding-rivki"
+  }
+}
