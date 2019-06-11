@@ -9,6 +9,12 @@ import topRight from "./images/top-right.png";
 import bottom from "./images/bottom.png";
 import signature from "./images/signature.jpg"
 
+function openMap() {
+  if (window) {
+    window.open('http://bit.ly/ikiichawedding', '_blank')
+  }
+}
+
 function App() {
   return (
     <div
@@ -69,7 +75,12 @@ function App() {
         <div className="center mb3">
           Location
         </div>
-        <button className="f4 grow no-underline br-pill ph3 pv2 mb2 dib white bg-near-black outline-0">Get Direction</button>
+        <button
+          className="f4 grow no-underline br-pill ph3 pv2 mb2 dib white bg-near-black outline-0"
+          onClick={openMap}
+        >
+          Get Direction
+        </button>
 
         <div className="center mt5 mb4">
           Credits
