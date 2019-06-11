@@ -1,5 +1,4 @@
 import React from "react";
-import ReactAudioPlayer from 'react-audio-player';
 
 import "./App.css";
 import couple from "./images/couple.png";
@@ -22,13 +21,6 @@ function App() {
     windowHeight = window.innerHeight || MINIMAL_HEIGHT
   }
   let isEligibleFullHeight = windowHeight >= MINIMAL_HEIGHT
-
-  setTimeout(() => {
-    let audioPlayer = document.getElementById('lets-rock')
-    if (audioPlayer && audioPlayer instanceof HTMLAudioElement) {
-      audioPlayer.play()
-    }
-  }, 500)
   return (
     <div
       style={{
@@ -99,14 +91,6 @@ function App() {
           Credits
         </div>
         <img src={signature} className="center w-50" />
-        <ReactAudioPlayer
-          id="lets-rock"
-          src="./audio.mp3"
-          className="dn"
-          controls
-          autoPlay
-          loop
-        />
       </div>
       <img src={bottom} className="w-100 mt6" />
     </div>
