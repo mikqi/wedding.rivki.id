@@ -104,7 +104,7 @@ function App() {
         <div className="center mt5 mb4">
           Credits
         </div>
-        <img src={signature} className="center w-50" />
+        <img src={signature} className="center w-30" />
       </div>
       <a
         className="link gray dib h3 w3 br-100 mr3 pa3 ba b--black-10 shadow-hover save-date"
@@ -112,7 +112,7 @@ function App() {
       >
         <img src={calendarIcon} alt="Save The Date"/>
       </a>
-      <img src={bottom} className="w-100 mt6" />
+      <img src={bottom} className="w-100 mt3" />
     </div>
   );
 }
