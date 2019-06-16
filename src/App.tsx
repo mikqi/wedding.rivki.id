@@ -30,8 +30,13 @@ function openMap() {
 function App() {
   const MINIMAL_HEIGHT = 645
   let windowHeight;
+  let browserWidth;
+  let buttonMargin;
   if (window) {
     windowHeight = window.innerHeight || MINIMAL_HEIGHT
+    browserWidth = window.innerWidth
+
+    buttonMargin = browserWidth > 600 ? (browserWidth - 600) / 2 : 0
   }
   let isEligibleFullHeight = windowHeight >= MINIMAL_HEIGHT
   return (
@@ -117,12 +122,21 @@ function App() {
           <img src={signature} />
         </a>
       </div>
-      <a
-        className="link gray dib h3 w3 br-100 mr3 pa3 ba b--black-10 shadow-hover save-date"
-        href={calendar.ics(CALENDAR_INVITATION_DATA)}
-      >
-        <img src={calendarIcon} alt="Save The Date"/>
-      </a>
+      <div>
+        <a
+          style={{
+            boxShadow: 'rgba(0, 0, 0, 0.1) 0px 0px 4px 2px',
+            background: 'white',
+            position: 'fixed',
+            right: buttonMargin,
+            bottom: 16
+          }}
+          className="link gray dib h3 w3 br-100 mr3 pa3 ba b--black-10 shadow-hover"
+          href={calendar.ics(CALENDAR_INVITATION_DATA)}
+        >
+          <img src={calendarIcon} alt="Save The Date"/>
+        </a>
+      </div>
       <img src={bottom} className="w-100 mt3" />
     </div>
   );

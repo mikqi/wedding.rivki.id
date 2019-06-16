@@ -46,11 +46,11 @@ function Stories() {
         </Suspense>
       ))}
 
-      <div className="flex flex-auto mt5 w-90 justify-center items-center">
-        <img src={require('./images/stories/cp1.jpg')} style={{width: 200}} />
+      <div className="flex flex-auto mt5 w-70 justify-center items-center">
+        <img className="flex flex-auto" src={require('./images/stories/cp1.jpg')} style={{width: 200}} />
       </div>
       <div className="flex flex-auto mt3 w-50 justify-center items-center">
-        <div className="artilla">
+        <div className="artilla tc">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam odio blanditiis, est ratione iste aliquam excepturi pariatur consectetur reiciendis cumque?
         </div>
       </div>
