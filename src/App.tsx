@@ -101,10 +101,12 @@ function App() {
         </div>
       </div>
       <div className="flex justify-center flex-column w-50 center mt4">
-        <div className="center mt5 mb4">
+        <div className="center mt5 mb2 f7">
           Credits
         </div>
-        <img src={signature} className="center w-30" />
+        <a href="https://www.instagram.com/nafaliafafasignature/" className="center w-20" target="_blank">
+          <img src={signature} />
+        </a>
       </div>
       <a
         className="link gray dib h3 w3 br-100 mr3 pa3 ba b--black-10 shadow-hover save-date"
