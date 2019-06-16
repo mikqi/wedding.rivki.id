@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import calendar from "./calendar-utils"
 
 import "./App.css";
@@ -9,6 +9,8 @@ import topRight from "./images/top-right.png";
 import bottom from "./images/bottom.png";
 import signature from "./images/signature.jpg"
 import calendarIcon from "./images/calendar.png"
+
+const Stories = React.lazy(() => import('./Stories'))
 
 const CALENDAR_INVITATION_DATA = {
   title: 'Ikki and Icha Wedding',
@@ -34,6 +36,7 @@ function App() {
   let isEligibleFullHeight = windowHeight >= MINIMAL_HEIGHT
   return (
     <div
+      className="overflow-hidden"
       style={{
         maxWidth: 600,
         position: "relative",
@@ -100,6 +103,12 @@ function App() {
           />
         </div>
       </div>
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <div className={`flex flex-column justify-between items-center sinhala`}>
+          <Stories />
+        </div>
+      </Suspense>
       <div className="flex justify-center flex-column w-50 center mt4">
         <div className="center mt5 mb2 f7">
           Credits
