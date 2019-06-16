@@ -11,6 +11,8 @@ import bottom from "./images/bottom.png";
 import signature from "./images/signature.jpg"
 import calendarIcon from "./images/calendar.png"
 
+const soundOn = require('./images/sound-on.png')
+const soundOff = require('./images/sound-off.png')
 const Stories = React.lazy(() => import('./Stories'))
 
 const CALENDAR_INVITATION_DATA = {
@@ -22,19 +24,40 @@ const CALENDAR_INVITATION_DATA = {
   description: 'Ikki and Icha Wedding Invitation Calendar'
 }
 
-class App extends React.Component{
-  audioEl: HTMLAudioElement | undefined;
+class App extends React.Component<any, any>{
+  audioRef: React.RefObject<any>;
 
   constructor(props) {
     super(props)
+    this.audioRef = React.createRef()
+    this.state = {
+      imageUri: soundOn
+    }
   }
 
   openMap = () => {
     window.open('http://bit.ly/ikiichawedding', '_blank')
   }
 
+  toggleMusic = () => {
+    const isPause = this.audioRef.current.audioEl.paused
+    console.log( isPause)
+    if (isPause) {
+      this.setState({
+        imageUri: soundOn
+      })
+      return this.audioRef.current.audioEl.play()
+    }
+
+    this.setState({
+      imageUri: soundOff
+    })
+    return this.audioRef.current.audioEl.pause()
+
+  }
+
   render () {
-    console.log(this.audioEl)
+    console.log(this.audioRef)
     const MINIMAL_HEIGHT = 645
     let windowHeight;
     let browserWidth;
@@ -155,15 +178,17 @@ class App extends React.Component{
               bottom: 24
             }}
             className="link gray dib h2 w2 br-100 mr2 pa2 ba b--black-10 shadow-hover"
+            onClick={this.toggleMusic}
           >
-            <img src={require('./images/sound-on.png')} alt="Save The Date"/>
+            <img src={this.state.imageUri} alt="Save The Date"/>
           </a>
         </div>
 
         <ReactAudioPlayer
+          className="dn"
           src='audio.mp3'
-          controls
-          ref={(element) => { this.audioEl = element; }}
+          loop
+          ref={this.audioRef}
         />
         <img src={bottom} className="w-100 mt3" />
       </div>
