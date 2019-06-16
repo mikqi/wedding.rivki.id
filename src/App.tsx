@@ -107,7 +107,7 @@ function App() {
         <img src={signature} className="center w-30" />
       </div>
       <a
-        className="link gray dib h3 w3 br-100 mr3 pa3 ba b--black-10 shadow-hover save-dackate"
+        className="link gray dib h3 w3 br-100 mr3 pa3 ba b--black-10 shadow-hover save-date"
         href={calendar.ics(CALENDAR_INVITATION_DATA)}
       >
         <img src={calendarIcon} alt="Save The Date"/>
