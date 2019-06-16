@@ -1,5 +1,4 @@
 import React, { Suspense } from "react";
-import calendar from "./calendar-utils"
 
 import "./App.css";
 import couple from "./images/couple.png";
@@ -8,19 +7,10 @@ import topLeft from "./images/top-left.png";
 import topRight from "./images/top-right.png";
 import bottom from "./images/bottom.png";
 import signature from "./images/signature.jpg"
-import calendarIcon from "./images/calendar.png"
 
 const WeddingAudio = React.lazy(() => import('./WeddingAudio'))
+const SaveDate = React.lazy(() => import('./SaveDate'))
 const Stories = React.lazy(() => import('./Stories'))
-
-const CALENDAR_INVITATION_DATA = {
-  title: 'Ikki and Icha Wedding',
-  start: new Date('July 06, 2019 11:00'),
-  duration: 120,
-  end: new Date('July 06, 2019 13:00'),     
-  address: 'Ixora Hall',
-  description: 'Ikki and Icha Wedding Invitation Calendar'
-}
 
 class App extends React.Component<any, any>{
   openMap = () => {
@@ -116,27 +106,15 @@ class App extends React.Component<any, any>{
         </Suspense>
         <div className="flex justify-center flex-column w-50 center mt4">
           <div className="center mt5 mb2 f7">
-            Credits
+            Designed By
           </div>
           <a href="https://www.instagram.com/nafaliafafasignature/" className="center w-20" target="_blank">
             <img src={signature} />
           </a>
         </div>
-        <div>
-          <a
-            style={{
-              boxShadow: 'rgba(0, 0, 0, 0.1) 0px 0px 4px 2px',
-              background: 'white',
-              position: 'fixed',
-              right: buttonMargin,
-              bottom: 16
-            }}
-            className="link gray dib h3 w3 br-100 mr3 pa3 ba b--black-10 shadow-hover"
-            href={calendar.ics(CALENDAR_INVITATION_DATA)}
-          >
-            <img src={calendarIcon} alt="Save The Date"/>
-          </a>
-        </div>
+        <Suspense fallback={<div>&nbsp;</div>}>
+          <SaveDate buttonMargin={buttonMargin} />
+        </Suspense>
         <Suspense fallback={<div>&nbsp;</div>}>
           <WeddingAudio buttonMargin={buttonMargin} />
         </Suspense>

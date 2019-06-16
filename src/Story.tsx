@@ -17,7 +17,7 @@ function Story({image, paragraph, isFontSpecial}) {
             top: '-150%',
             right: `${Math.ceil(Math.random() * 25)}%`,
             position: 'absolute',
-            opacity: .5
+            opacity: .3
           }}
         />
         {paragraph}

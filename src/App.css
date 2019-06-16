@@ -1,0 +1,35 @@
+.right-left {
+    animation: rightLeft 1s infinite alternate;
+    -webkit-animation: rightLeft 1s infinite alternate;
+  }
+
+@-webkit-keyframes rightLeft {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateX(-20px);
+    }
+  }
+  @keyframes rightLeft {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateX(-20px);
+    }
+  }
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-left-color: #111111;
+    border-right: 0;
+    margin-top: -8px;
+    margin-right: -5px;
+}
