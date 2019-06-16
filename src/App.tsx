@@ -83,7 +83,7 @@ function App() {
               Tangerang, Banten 15115
             </span>
             <span
-              className="f7 sans-serif grow no-underline br-pill ml2 ph2 pv1 mb2 dib white bg-near-black outline-0"
+              className="f7 sans-serif grow no-underline br-pill ml2 ph2 pv1 mb2 dib white bg-near-black outline-0 pointer"
               onClick={openMap}
             >
               Get Direction
@@ -107,7 +107,7 @@ function App() {
         <img src={signature} className="center w-30" />
       </div>
       <a
-        className="link gray dib h3 w3 br-100 mr3 pa3 ba b--black-10 shadow-hover save-date"
+        className="link gray dib h3 w3 br-100 mr3 pa3 ba b--black-10 shadow-hover save-dackate"
         href={calendar.ics(CALENDAR_INVITATION_DATA)}
       >
         <img src={calendarIcon} alt="Save The Date"/>
