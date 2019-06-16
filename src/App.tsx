@@ -41,7 +41,7 @@ class App extends React.Component<any, any>{
       >
         <img src={topLeft} className="absolute w-30 top-0 left-0" />
         <img src={topRight} className="absolute w-30 top-0 right-0" />
-        <div className={`${isEligibleFullHeight && 'vh-100'} flex flex-column justify-between items-center sinhala`}>
+        <div className={`${isEligibleFullHeight && 'vh-100'} relative flex flex-column justify-between items-center sinhala`}>
           <div className="flex flex-column flex-auto justify-center items-center sinhala">
             {/* IMAGE */}
             <img src={couple} className="z-1 mw-60 w-60" />
@@ -87,12 +87,12 @@ class App extends React.Component<any, any>{
               >
                 Get Direction
               </span>
-
+          
             </div>
+            <Suspense fallback={<div>&nbsp;</div>}>
+              <ScrollIndicator isEligibleFullHeight={isEligibleFullHeight} />
+            </Suspense>
           </div>
-          <Suspense fallback={<div>&nbsp;</div>}>
-            <ScrollIndicator isEligibleFullHeight={isEligibleFullHeight} />
-          </Suspense>
         </div>
 
         <Suspense fallback={<div>Loading...</div>}>

@@ -23,6 +23,8 @@ export default class ScrollIndicator extends Component<any, any> {
     return (
       <div
         style={{
+          position: "absolute",
+          bottom: 0,
           display: isHidden ? 'none' : 'block'
         }}
         className={`${!isEligibleFullHeight && 'dn'} scroll-indicator`}

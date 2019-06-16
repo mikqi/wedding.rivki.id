@@ -42,7 +42,7 @@ export default class WeddingAudio extends Component<any, any> {
             left: buttonMargin + 12,
             bottom: 24
           }}
-          className="link gray dib h2 w2 br-100 mr2 pa2 ba b--black-10 shadow-hover"
+          className="link gray dib h2 w2 br-100 mr2 pa2 ba b--black-10 shadow-hover grow"
           onClick={this.toggleMusic}
         >
           <img src={this.state.imageUri} alt="Save The Date"/>
