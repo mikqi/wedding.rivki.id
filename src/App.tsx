@@ -11,6 +11,7 @@ import signature from "./images/signature.jpg"
 const WeddingAudio = React.lazy(() => import('./WeddingAudio'))
 const SaveDate = React.lazy(() => import('./SaveDate'))
 const Stories = React.lazy(() => import('./Stories'))
+const ScrollIndicator = React.lazy(() => import('./ScrollIndicator'))
 
 class App extends React.Component<any, any>{
   openMap = () => {
@@ -43,7 +44,7 @@ class App extends React.Component<any, any>{
         <div className={`${isEligibleFullHeight && 'vh-100'} flex flex-column justify-between items-center sinhala`}>
           <div className="flex flex-column flex-auto justify-center items-center sinhala">
             {/* IMAGE */}
-            <img src={couple} className="z-1 mw-70 w-70" />
+            <img src={couple} className="z-1 mw-60 w-60" />
 
             {/* TITLE */}
             <div className="z-1 autumn mt3 f2">Wedding Day</div>
@@ -89,14 +90,9 @@ class App extends React.Component<any, any>{
 
             </div>
           </div>
-
-          <div className={`${!isEligibleFullHeight && 'dn'} scroll-indicator`}>
-            <img
-              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTYuMDAzIDE4LjYyNmw3LjA4MS03LjA4MUwyNSAxMy40NmwtOC45OTcgOC45OTgtOS4wMDMtOSAxLjkxNy0xLjkxNnoiLz48L3N2Zz4="
-              width="50"
-              style={{ opacity: 0.3 }}
-            />
-          </div>
+          <Suspense fallback={<div>&nbsp;</div>}>
+            <ScrollIndicator isEligibleFullHeight={isEligibleFullHeight} />
+          </Suspense>
         </div>
 
         <Suspense fallback={<div>Loading...</div>}>
