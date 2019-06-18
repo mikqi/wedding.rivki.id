@@ -25,9 +25,9 @@ export default class ScrollIndicator extends Component<any, any> {
         style={{
           position: "absolute",
           bottom: 0,
-          display: isHidden ? 'none' : 'block'
+          display: isHidden || !isEligibleFullHeight ? 'none' : 'block'
         }}
-        className={`${!isEligibleFullHeight && 'dn'} scroll-indicator`}
+        className="scroll-indicator"
       >
         <img
           src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBkPSJNMTYuMDAzIDE4LjYyNmw3LjA4MS03LjA4MUwyNSAxMy40NmwtOC45OTcgOC45OTgtOS4wMDMtOSAxLjkxNy0xLjkxNnoiLz48L3N2Zz4="

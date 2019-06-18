@@ -39,7 +39,8 @@ export default class SaveDate extends Component<any, any> {
             background: 'white',
             position: 'fixed',
             right: buttonMargin,
-            bottom: 16
+            bottom: 16,
+            zIndex: 999
           }}
           className="link gray dib h3 w3 br-100 mr3 pa3 ba b--black-10 shadow-hover grow"
           href={calendar.ics(CALENDAR_INVITATION_DATA)}
