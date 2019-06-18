@@ -94,12 +94,14 @@ class App extends React.Component<any, any>{
             </Suspense>
           </div>
         </div>
-
-        <Suspense fallback={<div>Loading...</div>}>
-          <div className={`flex flex-column justify-between items-center sinhala`}>
-            <Stories />
-          </div>
-        </Suspense>
+        
+        <div className="dn">
+          <Suspense fallback={<div>Loading...</div>}>
+            <div className={`flex flex-column justify-between items-center sinhala`}>
+              <Stories />
+            </div>
+          </Suspense>
+        </div>
         <div className="flex justify-center flex-column w-50 center mt4">
           <div className="center mt5 mb2 f7">
             Designed By
