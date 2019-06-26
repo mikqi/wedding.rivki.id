@@ -5,7 +5,7 @@ function Story({image, paragraph, isFontSpecial}) {
     <div className="flex flex-auto mt5 w-90 justify-center items-center">
       <img className="flex flex-auto" style={{width: 200}} src={require(`./images/stories/l${image}.jpg`)} />
       <div
-        className={`${isFontSpecial ? 'artilla' : ''} tc relative`}
+        className={`${isFontSpecial ? 'artilla' : ''} tc relative f4`}
       >
         <div
           style={{

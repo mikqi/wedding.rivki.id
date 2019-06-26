@@ -5,31 +5,31 @@ const Story = React.lazy(() => import('./Story'))
 
 const STORY_DATA = [
   {
-    paragraph: "Lorem ipsum dolor sit amet consectetur.",
+    paragraph: "Met at the university as the new student in September 2012.",
     isFontSpecial: false
   },
   {
-    paragraph: "Lorem ipsum dolor sit amet consectetur.",
+    paragraph: "We become best friends (Yap! Only friends!)",
     isFontSpecial: false
   },
   {
-    paragraph: "Lorem ipsum dolor sit amet consectetur.",
+    paragraph: "Finally we graduated in 2016, and back to our hometown. Alhamdulillah..",
     isFontSpecial: false
   },
   {
-    paragraph: "Lorem ipsum dolor sit amet consectetur.",
+    paragraph: "Got job in different city and very rare to meet, that make us sad.",
     isFontSpecial: false
   },
   {
-    paragraph: "Lorem ipsum dolor sit amet consectetur.",
+    paragraph: "Then, we got mad each other because we didn't have a time.",
     isFontSpecial: false
   },
   {
-    paragraph: "Lorem ipsum dolor sit amet consectetur.",
+    paragraph: "'Someone precious will feel lost when its gone.' And We feel it.",
     isFontSpecial: false
   },
   {
-    paragraph: "Lorem ipsum dolor sit amet consectetur.",
+    paragraph: "Then we realized that, we are completing each other.",
     isFontSpecial: false
   },
 ]
@@ -50,8 +50,8 @@ function Stories() {
         <img className="flex flex-auto" src={require('./images/stories/cp1.jpg')} style={{width: 200}} />
       </div>
       <div className="flex flex-auto mt3 w-50 justify-center items-center">
-        <div className="artilla tc">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam odio blanditiis, est ratione iste aliquam excepturi pariatur consectetur reiciendis cumque?
+        <div className="artilla tc f2">
+          "And 'Marry with Best Friend' is real!"
         </div>
       </div>
     </div>
