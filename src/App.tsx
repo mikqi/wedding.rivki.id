@@ -95,15 +95,23 @@ class App extends React.Component<any, any>{
           </div>
         </div>
         
-        <div className="dn">
-          <Suspense fallback={<div>Loading...</div>}>
-            <div className={`flex flex-column justify-between items-center sinhala`}>
-              <Stories />
-            </div>
-          </Suspense>
-        </div>
+        <Suspense fallback={<div>Loading...</div>}>
+          <div className={`flex flex-column justify-between items-center sinhala`}>
+            <Stories />
+          </div>
+        </Suspense>
+        
         <div className="flex justify-center flex-column w-50 center mt4">
           <div className="center mt5 mb2 f7">
+            Built with <span className="red">❤</span> By
+          </div>
+          <div className="center f3 artilla">
+            <a href="https://instagram.com/mikqii" className="black" style={{textDecoration: 'none'}}>@mikqi</a> & <a href="https://instagram/ichafizha" className="black" style={{textDecoration: 'none'}}>@ichafizha</a>
+          </div>
+        </div>
+
+        <div className="flex justify-center flex-column w-50 center mt4">
+          <div className="center mb2 f7">
             Designed By
           </div>
           <a href="https://www.instagram.com/nafaliafafasignature/" className="center w-20" target="_blank">
