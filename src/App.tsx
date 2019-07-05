@@ -62,7 +62,7 @@ class App extends React.Component<any, any>{
             <div className="z-1 flex gray">
               <div className="z-1 f4 flex flex-column items-center mr3 lh-solid">
                 <span>Akad Nikah</span>
-                <span>09.00 - Selesai</span>
+                <span>08.00 - Selesai</span>
               </div>
               <div className="z-1 f4 flex flex-column items-center ml3 lh-solid">
                 <span>Resepsi</span>
