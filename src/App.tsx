@@ -106,7 +106,7 @@ class App extends React.Component<any, any>{
             Built with <span className="red">❤</span> By
           </div>
           <div className="center f3 artilla">
-            <a href="https://instagram.com/mikqii" className="black" style={{textDecoration: 'none'}}>@mikqi</a> & <a href="https://instagram/ichafizha" className="black" style={{textDecoration: 'none'}}>@ichafizha</a>
+            <a href="https://instagram.com/mikqii" className="black" style={{textDecoration: 'none'}}>@mikqi</a> & <a href="https://instagram.com/ichafizha" className="black" style={{textDecoration: 'none'}}>@ichafizha</a>
           </div>
         </div>
 
